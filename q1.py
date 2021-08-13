@@ -1,6 +1,6 @@
-#                                                    Sum of 1st N natural numbers and N odd numbers.
+#                                                            Sum of 1st N natural numbers and N odd numbers.
 
-# (for 5 different values of N)
+#For 5 different values of N:
 repeat=1
 while repeat!=6:
 
@@ -13,6 +13,7 @@ while repeat!=6:
             print("Enter a natural number!")
 
         else:
+
             #Sum of first N natural numbers.
             n=1
             i=1
