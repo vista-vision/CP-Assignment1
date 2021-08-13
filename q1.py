@@ -1,11 +1,9 @@
-#                                                            Sum of 1st N natural numbers and N odd numbers.
+#                                                              Sum of 1st N natural numbers and N odd numbers.
 
 #For 5 different values of N:
 repeat=1
 while repeat!=6:
-
     N=input("What natural number would you like to sum up to?")
-
     try:
         p=int(N)
 
@@ -13,7 +11,6 @@ while repeat!=6:
             print("Enter a natural number!")
 
         else:
-
             #Sum of first N natural numbers.
             n=1
             i=1
