@@ -4,6 +4,7 @@
 repeat=1
 while repeat!=6:
     N=input("What natural number would you like to sum up to?")
+
     try:
         p=int(N)
 
