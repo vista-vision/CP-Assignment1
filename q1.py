@@ -4,9 +4,10 @@ repeat=1
 
 while repeat!=6:    #For 5 different values of N.
     N=input("What natural number would you like to sum up to?")
+
     try:
         p=int(N)
-        
+
         if p<=0:
             print("Enter a natural number!")
 
