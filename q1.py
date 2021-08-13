@@ -1,7 +1,8 @@
 #                                                              Sum of 1st N natural numbers and N odd numbers.
 
 repeat=1
-while repeat!=6:    # (for 5 different values of N)
+
+while repeat!=6:    #For 5 different values of N.
     N=input("What natural number would you like to sum up to?")
     try:
         p=int(N)
