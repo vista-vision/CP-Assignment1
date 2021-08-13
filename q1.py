@@ -1,4 +1,4 @@
-#                                             Sum of 1st N natural numbers and N odd numbers.
+#                                                    Sum of 1st N natural numbers and N odd numbers.
 
 # (for 5 different values of N)
 repeat=1
