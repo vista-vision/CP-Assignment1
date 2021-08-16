@@ -148,7 +148,6 @@ def exp(x,n):
     for e in range(n):
         #Convert degree input to radian:
         pi=math.pi
-        r=x*pi/180
         #Find the factorial and sum the series:
         y=fact(e)
         exp+=(r**e)/y
