@@ -134,13 +134,9 @@ from matplotlib import pyplot as plot
 def sin(x,n):
     sine=0
     for e in range(1,n+1):
-        sign=-1**e
-        #Convert degree input to radian:
-        pi=math.pi
-        r=x*pi/180
+        sign=((-1)**e)
         #Find the factorial and sum the series:
-        y=fact(2*e+1)
-        sine+=(sign*(r**(2*e+1)))/y
+        sine=sine+((sign)*((x**((2*e)+1))/(fact((2*e)+1))))
     return sine
 
 def exp(x,n):
@@ -149,17 +145,16 @@ def exp(x,n):
         #Convert degree input to radian:
         pi=math.pi
         #Find the factorial and sum the series:
-        y=fact(e)
-        exp+=(r**e)/y
+        exp=exp+((x**e)/fact(e))
     return exp
 
 #Using python functions for accurate values
 def accurate_sine(x):
-    bsin=math.sin(x)
-    return bsin
+    asin=math.sin(x)
+    return asin
 def accurate_exp(x):
-    bexp=math.exp(x)
-    return exp
+    aexp=math.exp(x)
+    return aexp
 
 #Errors
 def error_sine(x,n):
@@ -175,26 +170,35 @@ def plot_sin(x,precision):
     Error_Modulus=[]
     Num_Terms=[]
 
+    #Convert degree input to radian.
+    pi=math.pi
+    r=x*(pi/180)
+
     k=1
-    while error_sine(x,k)>precision:
-        Error_Modulus.append(error_sine(x,k))
+    while error_sine(r,k)>precision:
         Num_Terms.append(k)
+        Error_Modulus.append(error_sine(x,k))     
         k+=1
     
-    plot.plot(Num_Terms,Error_Modulus)
+    plot.plot(Num_Terms,Error_Modulus, 'bo')
+    plot.grid(color='r',ls='--',lw=0.5)
     plot.xlabel('Number of terms')
     plot.ylabel('Modulus of error')
     plot.axis([0,20,0,x/2])
     plot.title('Sine function - Modulus of error vs. number of terms considered from Taylor series expansion')
     plot.show()
 
-plot_sin(0.5,10**-5)
+plot_sin(0.2,10**(-1))
 
 '''
 def plot_exp(x,precision):
 
     Err_Mod=[]
     Terms_Num=[]
+
+    #Convert degree input to radian.
+    pi=math.pi
+    r=x*(pi/180)
 
     k=1
     while error_exp(x,k)>precision:
@@ -214,3 +218,12 @@ def plot_exp(x,precision):
 
 
 
+
+
+# %%
+
+
+
+
+
+# %%
